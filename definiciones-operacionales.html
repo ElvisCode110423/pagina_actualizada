@@ -1,0 +1,226 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Loreto - Banco de Sangre Tipo II</title>
+
+    <script src="js/loadFragments.js" defer></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+    <link rel="icon" href="images/BancoSangre/logo.jpg">
+    <link rel="stylesheet" href="modal-noticia/modal-noticia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+
+<body id="section_1">
+    <div id="navbar"></div>
+
+
+    <main class="container py-5">
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Definiciones Operacionales</h2>
+    
+            <!-- Tipos de Donantes -->
+            <div class="mb-4">
+                <h3 class="text-primary"><i class="bi bi-heart-fill me-2"></i>Tipos de Donantes</h3>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <!-- Donante Voluntario de Sangre -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-people-fill text-danger" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Donante Voluntario de Sangre</h5>
+                            <p class="card-text">Persona que libremente dona sangre, siendo sometida a un tamizaje completo para detectar enfermedades infectocontagiosas.</p>
+                        </div>
+                    </div>
+                    <!-- Donante Voluntario Captado -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-person-badge-fill text-warning" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Donante Voluntario Captado</h5>
+                            <p class="card-text">Persona orientada y sensibilizada para donar sangre voluntariamente y que se le realiza un tamizaje completo.</p>
+                        </div>
+                    </div>
+                    <!-- Donante Voluntario Repetitivo -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-person-check-fill text-primary" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Donante Voluntario Repetitivo</h5>
+                            <p class="card-text">Persona que dona de forma repetitiva cada 12 meses, con un tamizaje completo realizado antes de cada donación.</p>
+                        </div>
+                    </div>
+                    <!-- Donante Voluntario Fidelizado -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-person-heart text-danger" style="font-size: 2rem;"></i>
+
+                            </div>
+                            <h5 class="card-title">Donante Voluntario Fidelizado</h5>
+                            <p class="card-text">Persona que dona regularmente entre su sexta y décima donación, realizando siempre un tamizaje completo.</p>
+                        </div>
+                    </div>
+                    <!-- Donante Voluntario Móvil -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-person-fill-up text-success" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Donante Voluntario Móvil</h5>
+                            <p class="card-text">Persona que dona su onceava o más sangre, con tamizaje completo cada seis meses.</p>
+                        </div>
+                    </div>
+                    <!-- Donación Autóloga -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-person-x-fill text-warning" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Donación Autóloga</h5>
+                            <p class="card-text">Persona que dona sangre para uso personal en caso de una futura transfusión, con tamizaje completo realizado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Clasificación de Donantes -->
+            <div class="mb-4">
+                <h3 class="text-primary"><i class="bi bi-card-checklist me-2"></i>Clasificación de Donantes</h3>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <!-- Donante No Apto -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-x-circle-fill text-secondary" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Donante No Apto</h5>
+                            <p class="card-text">Persona que no califica para donar sangre debido a un criterio de evaluación durante el proceso.</p>
+                        </div>
+                    </div>
+                    <!-- Donante Diferido -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-clock-fill text-secondary" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Donante Diferido</h5>
+                            <p class="card-text">Persona cuya donación se difiere temporalmente debido a criterios médicos o de evaluación.</p>
+                        </div>
+                    </div>
+                    <!-- Donante Excluido -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-x-circle-fill text-danger" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Donante Excluido</h5>
+                            <p class="card-text">Persona excluida de la donación por motivos de salud u otros criterios de exclusión definitiva.</p>
+                        </div>
+                    </div>
+                    <!-- Donante Apto -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-check-circle-fill text-success" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Donante Apto</h5>
+                            <p class="card-text">Persona que completa exitosamente el proceso de evaluación y es apta para donar sangre.</p>
+                        </div>
+                    </div>
+                    <!-- Donante No Reactivo -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-check-circle-fill text-success" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Donante No Reactivo</h5>
+                            <p class="card-text">Persona cuyos resultados del tamizaje no muestran reactividad en ninguno de los indicadores de enfermedades infectocontagiosas.</p>
+                        </div>
+                    </div>
+                    <!-- Donante Reactivo -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-x-circle-fill text-danger" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Donante Reactivo</h5>
+                            <p class="card-text">Persona cuyo tamizaje muestra reactividad en uno o más de los marcadores inmunológicos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Entrega de Unidades de Sangre -->
+            <div>
+                <h3 class="text-primary"><i class="bi bi-droplet-half me-2"></i>Entrega de Unidades de Sangre</h3>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <!-- Apoyo Social -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-emoji-heart-eyes-fill text-success" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Apoyo Social</h5>
+                            <p class="card-text">Evaluación social para otorgar la insolvencia en la entrega de sangre a pacientes necesitados.</p>
+                        </div>
+                    </div>
+                    <!-- Autorización de Uso de Hemocomponentes -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-file-earmark-text-fill text-warning" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Autorización de Uso de Hemocomponentes</h5>
+                            <p class="card-text">Documentación y permisos necesarios para el uso de los hemocomponentes en la terapia de los pacientes.</p>
+                        </div>
+                    </div>
+                    <!-- Hemoderivados -->
+                    <div class="col">
+                        <div class="card border-0 shadow-sm p-3 h-100">
+                            <div class="icon mb-2 text-center">
+                                <i class="bi bi-droplet-fill text-primary" style="font-size: 2rem;"></i>
+                            </div>
+                            <h5 class="card-title">Hemoderivados</h5>
+                            <p class="card-text">La transferencia de hemocomponentes a partir de la sangre recolectada para el tratamiento de enfermedades hematológicas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    
+
+
+    <div id="footer"></div>
+
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/click-scroll.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="modal-noticia/modal-noticia.js"></script>
+
+
+</body>
+
+</html>
