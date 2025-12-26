@@ -1,0 +1,72 @@
+/* ================= HEADER ================= */
+
+/* Contenedor del header superior */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1040;
+  background-color: #9b0000;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+/* Enlaces del top header */
+.site-header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.site-header a:hover {
+  text-decoration: underline;
+}
+
+/* Iconos sociales */
+.site-header i {
+  font-size: 1rem;
+}
+
+/* ================= NAVBAR ================= */
+
+#mainNav {
+  position: fixed;
+  top: 40px; /* altura real del top header */
+  width: 100%;
+  z-index: 1030;
+  background-color: #ffffff;
+}
+
+/* Marca */
+.navbar-brand span {
+  line-height: 1.1;
+}
+
+/* Links */
+.navbar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #9b0000;
+}
+
+/* Botón donar */
+.navbar .btn-danger {
+  border-radius: 20px;
+  padding: 0.45rem 1.1rem;
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+  #mainNav {
+    top: 0;
+  }
+
+  .site-header {
+    display: none; /* ocultamos top bar en mobile */
+  }
+}

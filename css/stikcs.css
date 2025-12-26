@@ -1,0 +1,997 @@
+/* ================= SIDEBAR / STICKY ================= */
+#content {
+  position: relative;
+  overflow: visible;
+}
+
+aside {
+  position: relative;
+}
+
+.side-menu {
+  position: sticky;
+  top: calc(120px + 1rem);
+}
+
+
+/* Título */
+.side-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ================= MENU SLIDER ================= */
+
+.menu_slider .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Cada item */
+.menu_slider .bar {
+  position: relative;
+}
+
+main article {
+  scroll-margin-top: 160px; /* header + navbar */
+  padding-top: 1rem;
+}
+
+/* Enlace */
+.menu_slider .bar a {
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #000;
+  background: #f5f5f5;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 2;
+}
+
+/* Hover */
+.menu_slider .bar a:hover {
+  background: #e6e6e6;
+}
+
+/* ================= ACTIVO ================= */
+
+.menu_slider .bar.active a {
+  background: #b7e5c5; /* verde suave */
+  font-weight: 600;
+}
+
+/* Barra lateral/progreso (span) */
+.menu_slider .bar span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 6px;
+  background: #2ecc71;
+  border-radius: 8px 0 0 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Mostrar barra solo en activo */
+.menu_slider .bar.active span {
+  opacity: 1;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+  .side-menu {
+    position: static;
+    margin-bottom: 2rem;
+  }
+}
+
+.intro-content {
+  padding: 2rem 0 3rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.intro-content p {
+  margin-bottom: 1.2rem;
+}
+
+.intro-content strong {
+  color: #9b0000;
+}
+
+/* ================= NIVELES DE RESERVAS ================= */
+
+.niveles-reservas {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.intro-text p {
+  margin-bottom: 0.75rem;
+}
+
+/* TÍTULO CON BARRA ROJA */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-bar {
+  width: 6px;
+  height: 28px;
+  background: #c40000;
+  display: inline-block;
+}
+
+/* LAYOUT IMAGEN + TEXTO */
+.niveles-layout {
+  align-items: flex-start;
+}
+
+.niveles-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.niveles-list {
+  padding-left: 1.2rem;
+}
+
+.niveles-gracias {
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+/* ================= SABÍAS QUE ================= */
+
+.sabias-que {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.sabias-header {
+  background: #c40000;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.sabias-body {
+  padding: 1rem;
+  display: flex;
+  gap: 8.5rem;
+  align-items: flex-start;
+}
+
+.sabias-body ul {
+  margin: 0;
+  padding-left: 5px;
+  font-family: "monserrat", sans-serif;
+  font-weight: 300;
+  line-height: 1.6rem;
+}
+
+.sabias-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .sabias-body {
+    flex-direction: column;
+  }
+
+  .sabias-img {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* ================= INCLUSIÓN E INTERCULTURALIDAD ================= */
+
+.interculturalidad {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.interculturalidad-layout {
+  align-items: flex-start;
+}
+
+/* VIDEO */
+.video-box {
+  text-align: center;
+}
+
+.video-caption {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .video-box {
+    margin-top: 1rem;
+  }
+}
+
+/* ================= PUNTOS DE DONACIÓN ================= */
+
+.puntos-donacion {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.puntos-layout {
+  align-items: flex-start;
+}
+
+.puntos-img {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Accordion ajustes */
+.accordion-button {
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f3f3f3;
+  color: #000;
+}
+
+.puntos-donacion ol li::marker {
+  color: #000;
+  font-weight: 700;
+}
+
+/* ================= FAQ ================= */
+
+.faq-section {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.faq-section .accordion-button {
+  font-weight: 600;
+}
+
+.faq-section .accordion-body {
+  position: relative;
+}
+
+/* Imagen alineada a la derecha */
+.faq-img {
+  width: 260px;
+  max-width: 100%;
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-img {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem;
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* ================= BANNER DONACIÓN ================= */
+
+.banner-donacion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Accesibilidad (equivalente a element-invisible) */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ================= CAMPAÑAS / MARATONES ================= */
+
+.campana-maratones {
+  padding: 3rem 0;
+  position: relative; /* clave para sticky */
+}
+
+.campana-layout {
+  align-items: flex-start;
+}
+
+.campana-destacado {
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.campana-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* ================= PROCESO DONACIÓN ================= */
+
+.proceso-donacion {
+  position: relative;
+}
+
+.proceso-tabs .nav-link {
+  font-weight: 600;
+}
+
+.proceso-content {
+  padding: 1.5rem 0;
+  line-height: 1.7;
+}
+
+.img-proceso {
+  width: 200px;
+  height: auto;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .img-proceso {
+    float: none !important;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+}
+
+/* ================= PROCESO - PASO A PASO ================= */
+
+.proceso-paso-a-paso {
+  padding-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.proceso-paso-a-paso .h3-ckeditor {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-caption {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .proceso-paso-a-paso {
+    text-align: center;
+  }
+}
+
+/* ================= ¿QUÉ HACEMOS CON TU SANGRE? ================= */
+
+.hacemos-tu-sangre {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ----- Layout ----- */
+.hacemos-layout {
+  align-items: flex-start;
+}
+
+/* ----- Tabs laterales ----- */
+.hacemos-tabs {
+  position: sticky;
+  top: 180px; /* respeta header + navbar */
+  gap: 0.5rem;
+}
+
+.hacemos-tabs .nav-link {
+  border-radius: 6px;
+  background: #f5f5f5;
+  color: #000;
+  font-weight: 500;
+  padding: 0.6rem 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.hacemos-tabs .nav-link:hover {
+  background: #e9e9e9;
+}
+
+.hacemos-tabs .nav-link.active {
+  background: #b7e5c5;
+  color: #000;
+  font-weight: 700;
+  border-left: 4px solid #2ecc71;
+}
+
+/* ----- Contenido ----- */
+.hacemos-tu-sangre .tab-content {
+  padding-left: 1rem;
+}
+
+.hacemos-tu-sangre p {
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+/* ----- Imágenes dentro del contenido ----- */
+.hacemos-tu-sangre img {
+  max-width: 220px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* ----- Listas ----- */
+.hacemos-tu-sangre ul {
+  padding-left: 1.2rem;
+}
+
+.hacemos-tu-sangre ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+  .hacemos-tabs {
+    position: static;
+    margin-bottom: 1.5rem;
+  }
+
+  .hacemos-tu-sangre .tab-content {
+    padding-left: 0;
+  }
+
+  .hacemos-tu-sangre img {
+    float: none !important;
+    display: block;
+    margin: 0 auto 1rem;
+    max-width: 100%;
+  }
+}
+
+/* =========================
+   ESTRUCTURA GENERAL ARTICLES
+========================= */
+
+.section-article {
+  position: relative;
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+/* evita que el sticky se rompa */
+.section-article::before {
+  content: "";
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+}
+
+/* =========================
+   TÍTULOS DE SECCIÓN
+========================= */
+
+.section-article h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.section-article h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #198754; /* verde institucional */
+  margin-top: 0.75rem;
+  border-radius: 2px;
+}
+
+/* =========================
+   CONTENIDO GENERAL
+========================= */
+
+.section-article p,
+.section-article li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.section-article ul,
+.section-article ol {
+  padding-left: 1.2rem;
+}
+
+/* =========================
+   IMÁGENES
+========================= */
+
+.section-article img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* imágenes alineadas a la derecha (como las tuyas) */
+.img-lado-derecho {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  max-width: 300px;
+}
+
+/* =========================
+   BANNERS (PLASMA / INFO)
+========================= */
+
+.pa_banner_info_home {
+  border-radius: 14px;
+  overflow: hidden;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+}
+
+.pa_banner_info_home .content {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.pa_banner_info_home .tx-banner {
+  color: #fff;
+}
+
+.pa_banner_info_home .tx-banner .field-name-field-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.pa_banner_info_home .tx-banner a {
+  display: inline-block;
+  background-color: #198754;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.pa_banner_info_home .tx-banner a:hover {
+  background-color: #146c43;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   STICKY (MENÚ LATERAL O TOP)
+========================= */
+
+.sticky-container {
+  position: sticky;
+  top: 90px;
+  z-index: 100;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .section-article {
+    padding: 2.5rem 0;
+  }
+
+  .section-article h2 {
+    font-size: 1.8rem;
+  }
+
+  .img-lado-derecho {
+    float: none;
+    margin: 1rem 0;
+    max-width: 100%;
+  }
+
+  .pa_banner_info_home {
+    min-height: auto;
+  }
+}
+
+/* ===============================
+   DONACIÓN POR AFÉRESIS
+   =============================== */
+
+#donacion-aferesis {
+  scroll-margin-top: 90px; /* para menú sticky */
+}
+
+/* Título principal */
+#donacion-aferesis h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+#donacion-aferesis h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background-color: #c62828;
+  border-radius: 2px;
+}
+
+/* Subtítulos */
+#donacion-aferesis h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+/* Bloques de cita */
+#donacion-aferesis blockquote {
+  background: #fafafa;
+  border-left: 5px solid #c62828;
+  padding: 1.2rem 1.5rem;
+  margin: 1rem 0 2rem;
+}
+
+#donacion-aferesis blockquote p {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Último párrafo del blockquote sin margen extra */
+#donacion-aferesis blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links */
+#donacion-aferesis a {
+  color: #c62828;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#donacion-aferesis a:hover {
+  text-decoration: underline;
+}
+
+/* Ajustes generales de texto */
+#donacion-aferesis p {
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #donacion-aferesis {
+    padding: 3rem 1rem;
+  }
+
+  #donacion-aferesis h2 {
+    font-size: 1.8rem;
+  }
+
+  #donacion-aferesis h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* ====== ANCLA PARA STICKY ====== */
+article {
+  scroll-margin-top: 170px;
+}
+
+/* ====== MEDULA OSEA ====== */
+.medula-osea {
+  margin-bottom: 4rem;
+}
+
+/* TÍTULO */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.title-bar {
+  width: 6px;
+  height: 28px;
+  background: #c40000;
+}
+
+/* CARD */
+.medula-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: justify;
+}
+
+/* IMAGEN */
+.medula-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENIDO */
+.medula-content {
+  padding: 2.5rem;
+}
+
+.medula-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.medula-content p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* BOTÓN */
+.btn-medula {
+  display: inline-block;
+  padding: 0.75rem 1.4rem;
+  border: 2px solid #c40000;
+  color: #ffffff;
+  background-color: #9b0000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.btn-medula:hover {
+  background: #f8f7f7;
+  color: #f50202;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .medula-card {
+    grid-template-columns: 1fr;
+  }
+
+  .medula-content {
+    padding: 1.5rem;
+  }
+}
+
+/* ================= CONTENIDO RELACIONADO ================= */
+
+.side-related {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.side-related-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #333;
+}
+
+.side-related-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-related-list li {
+  margin-bottom: 0.75rem;
+}
+
+.side-related-list a {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: none;
+  line-height: 1.4;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  position: relative;
+  padding-left: 14px;
+}
+
+/* Bullet moderno */
+.side-related-list a::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Hover */
+.side-related-list a:hover {
+  color: #c40000;
+  padding-left: 18px;
+}
+
+/* ================= MÁS INFORMACIÓN ================= */
+
+.info-final {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid #e6e6e6;
+}
+
+.info-content p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.info-content a {
+  color: #c40000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.info-content a:hover {
+  text-decoration: underline;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+}
+
+.info-list li {
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* TAG FINAL */
+
+.info-tag {
+  margin-top: 1.5rem;
+}
+
+.tag-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #f3f3f3;
+  color: #304a7a;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 2px solid #273264;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tag-link:hover {
+  background-color: #363333;
+  color: #fff;
+}
+
+.paragraph-menu-progress .bar {
+  position: relative;
+  padding-left: 20px;
+}
+
+.paragraph-menu-progress .bar span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.paragraph-menu-progress .bar span::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #198754;
+  transition: height 0.4s ease;
+}
+
+.paragraph-menu-progress .bar.active span::before {
+  height: 100%;
+}
+
+.paragraph-menu-progress .bar a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.paragraph-menu-progress .bar.active a {
+  color: #198754;
+  font-weight: 700;
+}

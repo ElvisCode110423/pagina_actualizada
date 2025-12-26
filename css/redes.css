@@ -1,0 +1,81 @@
+/* ===============================
+   REDES SOCIALES FLOTANTES
+   LADO DERECHO
+   =============================== */
+
+.social-bar {
+  position: fixed;
+  top: 70%;
+  right: 30px;          /* 👉 DERECHA */
+  transform: translateY(-50%);
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ICONO BASE */
+.social-icon2 {
+  width: 46px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.3rem;
+  text-decoration: none;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: all 0.35s ease;
+}
+
+/* HOVER */
+.social-icon2:hover {
+  transform: translateX(-6px) scale(1.12); /* 👉 entra hacia la izquierda */
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4);
+}
+
+/* COLORES POR RED */
+.social-icon2.whatsapp {
+  background: #25d366;
+}
+
+.social-icon2.instagram {
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+}
+
+.social-icon2.facebook {
+  background: #1877f2;
+}
+
+.social-icon2.tiktok {
+  background: #000000;
+}
+
+.social-icon2.youtube {
+  background: #ff0000;
+}
+
+/* FOCUS ACCESIBLE */
+.social-icon2:focus {
+  outline: none;
+  transform: scale(1.15);
+}
+
+/* OCULTAR EN MÓVILES */
+@media (max-width: 768px) {
+  .social-bar {
+    display: none;
+  }
+}

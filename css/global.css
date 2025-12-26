@@ -1,0 +1,15 @@
+/* ================= GLOBAL ================= */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #fff;
+  color: #212529;
+}
+
+section {
+  padding: 4rem 0;
+}
