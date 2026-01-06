@@ -2,13 +2,9 @@
 .carusel-tamaño {
   height: 100vh;
   padding: 0;
+  margin-top: -30px;
   position: relative;
 }
-
-.carusel-tamaño{
-  margin: 1.5rem 0;
-}
-
 
 .section-title {
   font-weight: 700;
@@ -20,9 +16,6 @@
 
 .hero-section {
   min-height: calc(100vh - 150px);
-  background: linear-gradient(rgba(155, 0, 0, 0.78), rgba(0, 0, 0, 0.65)),
-    url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b") center /
-      cover no-repeat;
   color: #fff;
   display: flex;
   align-items: center;
@@ -41,15 +34,25 @@
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 991px) {
-  .hero-section {
-    min-height: 70vh;
-    text-align: center;
+  .carusel-tamaño {
+    height: auto;          /* 🔥 CLAVE */
+    margin-top: 0;
+  }
+
+  .carusel-tamaño .carousel,
+  .carusel-tamaño .carousel-inner,
+  .carusel-tamaño .carousel-item {
+    height: auto;
+  }
+
+  .carusel-tamaño .hero-img {
+    height: auto;
+    max-height: 420px;     /* compacto y limpio */
+    object-fit: cover;
   }
 }
 
 /* ================= HERO CAROUSEL ================= */
-
-
 
 .carusel-tamaño .carousel,
 .carusel-tamaño .carousel-inner,
@@ -66,9 +69,14 @@
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 991px) {
-  .carusel-tamaño {
-    margin-top: 80px;
-    height: 70vh;
+  .carusel-tamaño .hero-img {
+     max-height: 540px;
   }
 }
 
+/* Mobile */
+@media (max-width: 576px) {
+  .hero-carousel .hero-img {
+    max-height: 540px;
+  }
+}

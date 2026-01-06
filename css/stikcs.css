@@ -2,6 +2,7 @@
 #content {
   position: relative;
   overflow: visible;
+ 
 }
 
 aside {
@@ -237,6 +238,8 @@ main article {
   }
 }
 
+
+
 /* ================= PUNTOS DE DONACIÓN ================= */
 
 .puntos-donacion {
@@ -244,18 +247,53 @@ main article {
   line-height: 1.7;
 }
 
+/* Layout */
 .puntos-layout {
   align-items: flex-start;
 }
 
-.puntos-img {
-  width: 100%;
-  max-height: 320px;
-  object-fit: cover;
-  border-radius: 6px;
+/* ================= IMAGEN / MAPA ================= */
+
+/* Contenedor común (imagen y mapa) */
+.puntos-donacion .position-relative {
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-/* Accordion ajustes */
+/* Wrapper que MANDA la altura del mapa */
+.puntos-donacion .mapa-wrapper {
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+/* Imagen */
+.puntos-donacion .img-fluid {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+/* OpenLayers / Leaflet ocupan TODO el wrapper */
+.puntos-donacion .mapa-leaflet,
+.puntos-donacion .openlayers-map,
+.puntos-donacion .openlayers-map-container {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 360px;
+}
+
+/* ================= BOTONES FLOTANTES ================= */
+
+.puntos-donacion .btn {
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* ================= ACCORDION ================= */
+
 .accordion-button {
   font-weight: 600;
 }
@@ -265,10 +303,60 @@ main article {
   color: #000;
 }
 
+/* Listas numeradas */
 .puntos-donacion ol li::marker {
   color: #000;
   font-weight: 700;
 }
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+  .puntos-donacion .mapa-wrapper {
+    height: 240px;
+  }
+
+  .puntos-donacion .img-fluid {
+    height: 240px;
+  }
+
+  .puntos-donacion .mapa-leaflet,
+  .puntos-donacion .openlayers-map,
+  .puntos-donacion .openlayers-map-container {
+    min-height: 240px;
+  }
+
+  .puntos-donacion .btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+
+/* ===== FIX DEFINITIVO LEAFLET ===== */
+
+.puntos-donacion .leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.puntos-donacion .mapa-wrapper {
+  width: 100%;
+  height: 360px;
+  background: #f5f5f5;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .puntos-donacion .mapa-wrapper {
+    height: 240px;
+  }
+}
+
+
+
 
 /* ================= FAQ ================= */
 
@@ -995,3 +1083,43 @@ article {
   color: #198754;
   font-weight: 700;
 }
+
+
+
+
+/* ===== SUBMENU ===== */
+.menu_slider .has-submenu > a {
+  cursor: pointer;
+}
+
+.menu_slider .submenu {
+  padding-left: 12px;
+  margin-top: 6px;
+}
+
+.menu_slider .submenu a {
+  display: block;
+  padding: 6px 10px;
+  font-size: 0.88rem;
+  border-radius: 6px;
+  color: #333;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.menu_slider .submenu a:hover {
+  background: #f0f0f0;
+}
+
+.menu_slider .submenu a.active {
+  background: #dff5e7;
+  font-weight: 600;
+}
+
+/* Icono rota */
+.menu_slider .has-submenu.open .submenu-icon {
+  transform: rotate(180deg);
+  transition: transform 0.2s ease;
+}
+
+
